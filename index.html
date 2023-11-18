@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <!-- <script>
@@ -39,15 +39,15 @@
             class="md:sticky lg:sticky top-10 w-full md:w-[30rem] h-[40rem] md:h-[38rem] bg-black rounded-lg py-4">
         </div>
         <div class="w-full -mt-10">
-            <div w3-include-html="v1/components/navbar.html" class="sticky top-0 right-0 bg-[#151F32] py-10 z-10 w-full">
+            <div w3-include-html="v1/components/navbar.html" class="sticky top-0 bg-[#151F32] py-10 z-10 w-full">
             </div>
             <div class="flex flex-col justify-between bg-black rounded-lg px-12 py-6 h-22">
-                <div w3-include-html="v1/components/home.html" x-cloak x-show="open == `home`" class="space-y-10"></div>
-                <div w3-include-html="v1/components/resume.html" x-cloak x-show="open == `resume`" class="space-y-10">
+                <div w3-include-html="v1/components/home.html" x-cloak x-show="open == `Home`" class="space-y-10"></div>
+                <div w3-include-html="v1/components/resume.html" x-cloak x-show="open == `Resume`" class="space-y-10">
                 </div>
-                <div w3-include-html="v1/components/projects.html" x-cloak x-show="open == `projects`" class="space-y-10">
+                <div w3-include-html="v1/components/projects.html" x-cloak x-show="open == `Projects`" class="space-y-10">
                 </div>
-                <div w3-include-html="v1/components/contact.html" x-cloak x-show="open == `contact`" class="space-y-10">
+                <div w3-include-html="v1/components/contact.html" x-cloak x-show="open == `Contact`" class="space-y-10">
                 </div>
                 <div class="mt-5">
                     <p class="text-center">@2023 All Rights Reserved by Me.</p>
@@ -62,9 +62,10 @@
 <script>
     document.addEventListener('alpine:init', () => {
         Alpine.data('main', () => ({
-            open: 'contact',
+            open: 'Home',
 
             toggle(page) {
+                document.title = page
                 this.open = page
             }
         }))
