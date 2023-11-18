@@ -35,19 +35,19 @@
 
 <body x-data="main" class="flex justify-between flex-col text-white w-full space-y-10 bg-[#151F32]">
     <div class="flex flex-col xs:flex-col sm:flex-col md:flex-row lg:flex-row container mx-auto space-x-0 md:space-x-10 mt-20">
-        <div w3-include-html="components/sidebar.html"
+        <div w3-include-html="v1/components/sidebar.html"
             class="md:sticky lg:sticky top-10 w-full md:w-[30rem] h-[40rem] md:h-[38rem] bg-black rounded-lg py-4">
         </div>
         <div class="w-full -mt-10">
-            <div w3-include-html="components/navbar.html" class="sticky top-0 right-0 bg-[#151F32] py-10 z-10 w-full">
+            <div w3-include-html="v1/components/navbar.html" class="sticky top-0 right-0 bg-[#151F32] py-10 z-10 w-full">
             </div>
             <div class="flex flex-col justify-between bg-black rounded-lg px-12 py-6 h-22">
-                <div w3-include-html="components/home.html" x-cloak x-show="open == `home`" class="space-y-10"></div>
-                <div w3-include-html="components/resume.html" x-cloak x-show="open == `resume`" class="space-y-10">
+                <div w3-include-html="v1/components/home.html" x-cloak x-show="open == `home`" class="space-y-10"></div>
+                <div w3-include-html="v1/components/resume.html" x-cloak x-show="open == `resume`" class="space-y-10">
                 </div>
-                <div w3-include-html="components/projects.html" x-cloak x-show="open == `projects`" class="space-y-10">
+                <div w3-include-html="v1/components/projects.html" x-cloak x-show="open == `projects`" class="space-y-10">
                 </div>
-                <div w3-include-html="components/contact.html" x-cloak x-show="open == `contact`" class="space-y-10">
+                <div w3-include-html="v1/components/contact.html" x-cloak x-show="open == `contact`" class="space-y-10">
                 </div>
                 <div class="mt-5">
                     <p class="text-center">@2023 All Rights Reserved by Me.</p>
