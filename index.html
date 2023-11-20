@@ -36,6 +36,7 @@
 <body x-data="main" x-init="() => { setTimeout(function() {
     showTransition = true
   }, 100) }" class="flex justify-between flex-col text-white w-full space-y-10 bg-[#151F32]">
+    <div x-show="modal" w3-include-html="v1/components/modal.html"></div>
     <div
         class="flex flex-col xs:flex-col sm:flex-col md:flex-row lg:flex-row container mx-auto space-x-0 md:space-x-5 lg:space-x-10 mt-10 md:mt-15 lg:mt-20">
         <div w3-include-html="v1/components/sidebar.html" x-show="showTransition"
@@ -89,6 +90,7 @@
     document.addEventListener('alpine:init', () => {
         Alpine.data('main', () => ({
             open: 'Home',
+            modal: false,
             showTransition: false,
 
             // init() {
