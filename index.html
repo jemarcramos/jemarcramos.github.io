@@ -35,7 +35,7 @@
 
 <body x-data="main" x-init="() => { setTimeout(function() {
     showTransition = true
-  }, 100) }" class="flex justify-between flex-col text-white w-full space-y-10 bg-[#151F32]">
+  }, 100) }" class="flex justify-between flex-col text-white w-full space-y-10 bg-[#151F32] bg-fixed bg-no-repeat bg-auto" style="background-image: url(v1/assets/images/robot-bg.png)">
     <div x-show="modal" w3-include-html="v1/components/modal.html"></div>
     <div
         class="flex flex-col xs:flex-col sm:flex-col md:flex-row lg:flex-row container mx-auto space-x-0 md:space-x-5 lg:space-x-10 mt-10 md:mt-15 lg:mt-20">
@@ -48,32 +48,37 @@
             <div w3-include-html="v1/components/navbar.html" x-show="showTransition"
                 x-transition:enter="transition ease-out duration-1000"
                 x-transition:enter-start="opacity-0 -translate-y-96" x-transition:enter-end="opacity-100 translate-x-0"
-                class="sticky top-0 bg-[#151F32] py-0 md:py-5 lg:py-10 z-10 w-full">
+                class="sticky top-0 bg-[#151F32] py-0 md:py-5 lg:py-10 z-10 w-full bg-fixed bg-no-repeat bg-auto" style="background-image: url(v1/assets/images/robot-bg.png)">
             </div>
             <div x-show="showTransition" x-transition:enter="transition ease-out duration-1000"
                 x-transition:enter-start="opacity-0 translate-x-96" x-transition:enter-end="opacity-100 translate-x-0"
-                class="flex flex-col justify-between overflow-hidden">
+                class="flex flex-col justify-between overflow-hidden bg-fixed bg-no-repeat bg-auto" style="background-image: url(v1/assets/images/robot-bg.png)">
+                 <!-- <img class="absolute object-scale-down" src="v1/assets/images/robot-bg.png" alt="robot">   -->
                 <div w3-include-html="v1/components/home.html" x-cloak x-show="open == `Home`"
                     x-transition:enter="transition ease-out duration-1000"
                     x-transition:enter-start="opacity-0 translate-x-96"
-                    x-transition:enter-end="opacity-100 translate-x-0" class="space-y-10 bg-black/50 rounded-lg px-4 md:px-5 lg:px-12 py-4 md:py-6"
+                    x-transition:enter-end="opacity-100 translate-x-0"
+                    class="space-y-10 bg-black/50 rounded-lg px-4 md:px-5 lg:px-12 py-4 md:py-6"
                     :class="open == `Home` ? `order-first` : `order-none` "></div>
                 <div w3-include-html="v1/components/resume.html" x-cloak x-show="open == `Resume`"
                     x-transition:enter="transition ease-out duration-1000"
                     x-transition:enter-start="opacity-0 translate-x-96"
-                    x-transition:enter-end="opacity-100 translate-x-0" class="space-y-10 bg-black/50 rounded-lg px-4 md:px-5 lg:px-12 py-4 md:py-6"
+                    x-transition:enter-end="opacity-100 translate-x-0"
+                    class="space-y-10 bg-black/50 rounded-lg px-4 md:px-5 lg:px-12 py-4 md:py-6"
                     :class="open == `Resume` ? `order-first` : `order-none` ">
                 </div>
                 <div w3-include-html="v1/components/projects.html" x-cloak x-show="open == `Projects`"
                     x-transition:enter="transition ease-out duration-1000"
                     x-transition:enter-start="opacity-0 translate-x-96"
-                    x-transition:enter-end="opacity-100 translate-x-0" class="space-y-10 bg-black/50 rounded-lg px-4 md:px-5 lg:px-12 py-4 md:py-6"
+                    x-transition:enter-end="opacity-100 translate-x-0"
+                    class="space-y-10 bg-black/50 rounded-lg px-4 md:px-5 lg:px-12 py-4 md:py-6"
                     :class="open == `Projects` ? `order-first` : `order-none` ">
                 </div>
                 <div w3-include-html="v1/components/contact.html" x-cloak x-show="open == `Contact`"
                     x-transition:enter="transition ease-out duration-1000"
                     x-transition:enter-start="opacity-0 translate-x-96"
-                    x-transition:enter-end="opacity-100 translate-x-0" class="space-y-10 bg-black/50 rounded-lg px-4 md:px-5 lg:px-12 py-4 md:py-6"
+                    x-transition:enter-end="opacity-100 translate-x-0"
+                    class="space-y-10 bg-black/50 rounded-lg px-4 md:px-5 lg:px-12 py-4 md:py-6"
                     :class="open == `Contact` ? `order-first` : `order-none` ">
                 </div>
                 <div class="mt-5">
