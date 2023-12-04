@@ -7,6 +7,20 @@
     <title>Home</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <!-- <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    backgroundImage: (theme) => ({
+                        'gradient-primary': `linear-gradient(to right, ${theme('colors.pink')}, ${theme('colors.orange')})`,
+                    }),
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script> -->
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.2/dist/cdn.min.js"></script>
     <style>
         [x-cloak] {
@@ -21,9 +35,8 @@
 
 <body x-data="main" x-init="() => { setTimeout(function() {
     showTransition = true
-  }, 100) }"
-    class="flex justify-between flex-col text-white w-full space-y-10 bg-[#151F32] bg-fixed bg-no-repeat bg-auto"
-    style="background-image: url(v1/assets/images/robot-bg.png)">
+  }, 100) }" class="flex justify-between flex-col text-white w-full space-y-10 bg-[#151F32] bg-fixed bg-no-repeat bg-auto" style="background-image: url(v1/assets/images/robot-bg.png)">
+    <div x-show="modal" w3-include-html="v1/components/modal.html"></div>
     <div
         class="flex flex-col xs:flex-col sm:flex-col md:flex-row lg:flex-row container mx-auto space-x-0 md:space-x-5 lg:space-x-10 mt-10 md:mt-15 lg:mt-20">
         <div w3-include-html="v1/components/sidebar.html" x-show="showTransition"
@@ -35,14 +48,12 @@
             <div w3-include-html="v1/components/navbar.html" x-show="showTransition"
                 x-transition:enter="transition ease-out duration-1000"
                 x-transition:enter-start="opacity-0 -translate-y-96" x-transition:enter-end="opacity-100 translate-x-0"
-                class="sticky top-0 bg-[#151F32] py-0 md:py-5 lg:py-10 z-10 w-full bg-fixed bg-no-repeat bg-auto"
-                style="background-image: url(v1/assets/images/robot-bg.png)">
+                class="sticky top-0 bg-[#151F32] py-0 md:py-5 lg:py-10 z-10 w-full bg-fixed bg-no-repeat bg-auto" style="background-image: url(v1/assets/images/robot-bg.png)">
             </div>
             <div x-show="showTransition" x-transition:enter="transition ease-out duration-1000"
                 x-transition:enter-start="opacity-0 translate-x-96" x-transition:enter-end="opacity-100 translate-x-0"
-                class="flex flex-col justify-between overflow-hidden bg-fixed bg-no-repeat bg-auto"
-                style="background-image: url(v1/assets/images/robot-bg.png)">
-                <!-- <img class="absolute object-scale-down" src="v1/assets/images/robot-bg.png" alt="robot">   -->
+                class="flex flex-col justify-between overflow-hidden bg-fixed bg-no-repeat bg-auto" style="background-image: url(v1/assets/images/robot-bg.png)">
+                 <!-- <img class="absolute object-scale-down" src="v1/assets/images/robot-bg.png" alt="robot">   -->
                 <div w3-include-html="v1/components/home.html" x-cloak x-show="open == `Home`"
                     x-transition:enter="transition ease-out duration-1000"
                     x-transition:enter-start="opacity-0 translate-x-96"
