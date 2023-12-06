@@ -17,16 +17,30 @@
         body {
             font-family: 'Poppins'
         }
+
+        .overly-bg {
+            position: fixed;
+            bottom: 0;
+            height: 100vh;
+            width: 100%;
+            -webkit-box-shadow: inset 0 -32px 32px -9px #000000;
+            -moz-box-shadow: inset 0 -32px 32px -9px #000000;
+            box-shadow: inset 0 -100px 200px -9px #000000;
+            pointer-events: auto;
+        }
     </style>
 </head>
 
 <body x-data="main" x-init="() => { setTimeout(function() {
     showTransition = true
-  }, 100) }"
-    class="flex justify-between flex-col text-white w-full space-y-10 bg-[#151F32] bg-fixed bg-no-repeat bg-auto"
-    style="background-image: url(v1/assets/images/robot-bg.png)">
+  }, 100);
+  initScrollListener()
+ }" class="flex justify-between flex-col text-white w-full space-y-10 bg-[#151F32] bg-fixed bg-no-repeat bg-auto"
+    style="background-image: url(v1/assets/images/robot-bg.png);">
+    <span class="overly-bg">
+    </span>
     <div
-        class="flex flex-col xs:flex-col sm:flex-col md:flex-row lg:flex-row container mx-auto space-x-0 md:space-x-5 lg:space-x-10 mt-10 md:mt-15 lg:mt-20">
+        class="relative flex flex-col xs:flex-col sm:flex-col md:flex-row lg:flex-row container mx-auto space-x-0 md:space-x-5 lg:space-x-10 mt-10 md:mt-15 lg:mt-20">
         <div w3-include-html="v1/components/sidebar.html" x-show="showTransition"
             x-transition:enter="transition ease-out duration-1000" x-transition:enter-start="opacity-0 -translate-x-96"
             x-transition:enter-end="opacity-100 translate-x-0"
@@ -41,15 +55,15 @@
             </div>
             <div x-show="showTransition" x-transition:enter="transition ease-out duration-1000"
                 x-transition:enter-start="opacity-0 translate-x-96" x-transition:enter-end="opacity-100 translate-x-0"
-                class="flex flex-col justify-between overflow-hidden bg-fixed bg-no-repeat bg-auto"
+                class="flex flex-col justify-between bg-fixed bg-no-repeat bg-auto overflow-hidden"
                 style="background-image: url(v1/assets/images/robot-bg.png)">
-                <!-- <img class="absolute object-scale-down" src="v1/assets/images/robot-bg.png" alt="robot">   -->
                 <div w3-include-html="v1/components/home.html" x-cloak x-show="open == `Home`"
                     x-transition:enter="transition ease-out duration-1000"
                     x-transition:enter-start="opacity-0 translate-x-96"
                     x-transition:enter-end="opacity-100 translate-x-0"
                     class="space-y-10 bg-black/50 rounded-lg px-4 md:px-5 lg:px-12 py-4 md:py-6"
-                    :class="open == `Home` ? `order-first` : `order-none` "></div>
+                    :class="open == `Home` ? `order-first` : `order-none` ">
+                </div>
                 <div w3-include-html="v1/components/resume.html" x-cloak x-show="open == `Resume`"
                     x-transition:enter="transition ease-out duration-1000"
                     x-transition:enter-start="opacity-0 translate-x-96"
@@ -111,7 +125,15 @@
                 this.open = page
             },
 
-            getHeight() {
+            initScrollListener() {
+                window.addEventListener('scroll', function () {
+                    this.getElement;
+                    var scrollPosition = window.scrollY;
+                    console.log(scrollPosition);
+                });
+
+
+
                 // navbar = document.querySelector(".navbar");
                 // navbar1 = document.querySelector(".navbar1");
                 // navbar_pos = navbar.getBoundingClientRect();
@@ -125,6 +147,19 @@
                 //     }
                 // }
                 // console.log(navbar_pos.top);
+            },
+
+            getElement() {
+                // aaa = document.querySelector(".about-me-el");
+                // console.log(aaa);
+
+                // aaa_pos = aaa.getBoundingClientRect();
+                // console.log(aaa_pos);
+
+                // window.addEventListener('scroll', function () {
+                //     var scrollPosition = window.scrollY;
+                //     console.log(scrollPosition);
+                // });
             }
         }))
     })

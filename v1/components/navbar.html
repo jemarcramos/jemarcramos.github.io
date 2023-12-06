@@ -2,22 +2,22 @@
     class="flex justify-center lg:justify-end items-center space-x-4 md:space-x-6 bg-black/60 p-6 rounded-none md:rounded-lg ">
     <button @click="toggle('Home')"
         class="w-20 h-22  hover:bg-gradient-to-br from-[#20A2F0] via-[#353897] to-[#0E0F28] flex flex-col justify-center items-center px-4 py-3 rounded-lg space-y-1 hover:text-white"
-        :class="open == 'Home' ? 'bg-gradient-to-br from-[#20A2F0] via-[#353897] to-[#0E0F28] text-white' : 'bg-gray-900 text-gray-300'">
+        :class="open == 'Home' ? 'bg-gradient-to-br from-[#20A2F0] via-[#353897] to-[#0E0F28] text-white animate-bounce' : 'bg-gray-900 text-gray-300 animate-none'">
         <img src="v1/assets/nav-icons/home.png" alt="home">
     </button>
     <button @click="toggle('Education')"
         class="w-20 h-22  hover:bg-gradient-to-br from-[#20A2F0] via-[#353897] to-[#0E0F28] flex flex-col justify-center items-center px-4 py-3 rounded-lg space-y-1 hover:text-white"
-        :class="open == 'Education' ? 'bg-gradient-to-br from-[#20A2F0] via-[#353897] to-[#0E0F28] text-white' : 'bg-gray-900 text-gray-300'">
+        :class="open == 'Education' ? 'bg-gradient-to-br from-[#20A2F0] via-[#353897] to-[#0E0F28] text-white animate-bounce' : 'bg-gray-900 text-gray-300 animate-none'">
         <img src="v1/assets/nav-icons/education.png" alt="education">
     </button>
     <button @click="toggle('Work Experience')"
         class="w-20 h-22  hover:bg-gradient-to-br from-[#20A2F0] via-[#353897] to-[#0E0F28] flex flex-col justify-center items-center px-4 py-3 rounded-lg space-y-1 hover:text-white"
-        :class="open == 'Work Experience' ? 'bg-gradient-to-br from-[#20A2F0] via-[#353897] to-[#0E0F28] text-white' : 'bg-gray-900 text-gray-300'">
+        :class="open == 'Work Experience' ? 'bg-gradient-to-br from-[#20A2F0] via-[#353897] to-[#0E0F28] text-white animate-bounce' : 'bg-gray-900 text-gray-300 animate-none'">
         <img src="v1/assets/nav-icons/work-experience.png" alt="work-experience">
     </button>
     <button @click="toggle('Contact')"
         class="w-20 h-22  hover:bg-gradient-to-br from-[#20A2F0] via-[#353897] to-[#0E0F28] flex flex-col justify-center items-center px-4 py-3 rounded-lg space-y-1 hover:text-white"
-        :class="open == 'Contact' ? 'bg-gradient-to-br from-[#20A2F0] via-[#353897] to-[#0E0F28] text-white' : 'bg-gray-900 text-gray-300'">
+        :class="open == 'Contact' ? 'bg-gradient-to-br from-[#20A2F0] via-[#353897] to-[#0E0F28] text-white animate-bounce' : 'bg-gray-900 text-gray-300 animate-none'">
         <img src="v1/assets/nav-icons/contact.png" alt="contact">
     </button>
 </div>
