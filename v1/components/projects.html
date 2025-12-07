@@ -1,6 +1,14 @@
-<div class="space-y-6">
+<div class="flex items-baseline space-y-6">
+    <img class="w-16 h-16 mr-3" src="v1/assets/nav-icons/projects.png" alt="about-me">
     <h1 class="text-3xl md:text-3xl lg:text-4xl font-semibold">Projects</h1>
 </div>
+
+<p x-transition:enter="delay-300 transition ease-out duration-1000" x-transition:enter-start="opacity-0 translate-y-32"
+    x-transition:enter-end="opacity-100 translate-y-0" class="text-gray-300 text-sm md:text-md lg:text-lg text-justify">
+    These are the full projects I personally developed end-to-end — from planning, database architecture, backend logic,
+    API development, UI/UX, and frontend implementation.
+</p>
+<p class="text-gray-300 text-sm md:text-md lg:text-lg text-justify">This not include projects where I only handled maintenance, debugging, or partial feature updates.</p>
 
 <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-3">
     <div class="group bg-gray-900 rounded-lg overflow-hidden border border-gray-900 hover:border-blue-700">
@@ -12,7 +20,7 @@
         </div>
     </div>
     <div class="group bg-gray-900 rounded-lg overflow-hidden border border-gray-900 hover:border-blue-700">
-        <img src="v1/assets/projects/neodog.png"
+        <img src="v1/assets/projects/neodog.png" loading="lazy"
             class="object-cover w-full h-64 transition-transform duration-300 group-hover:scale-105">
         <div class="px-4 py-3">
             <h1 class="text-2xl text-gray-300 ">Neodog</h1>
@@ -20,19 +28,89 @@
         </div>
     </div>
     <div class="group bg-gray-900 rounded-lg overflow-hidden border border-gray-900 hover:border-blue-700">
-        <img src="v1/assets/projects/yachtiee.png"
+        <img src="v1/assets/projects/yachtiee.png" loading="lazy"
             class="object-cover w-full h-64 transition-transform duration-300 group-hover:scale-105">
         <div class="px-4 py-3">
             <h1 class="text-2xl text-gray-300 ">Yachtiee</h1>
             <a href="https://yachtiee.ae" class="text-lg">https://yachtiee.ae</a>
         </div>
     </div>
-    <!-- <div class="group bg-gray-900 rounded-lg overflow-hidden border border-gray-900 hover:border-blue-700">
-        <img src="v1/assets/images/image1.jfif"
+    <div class="group bg-gray-900 rounded-lg overflow-hidden border border-gray-900 hover:border-blue-700">
+        <img src="v1/assets/projects/hospital-staffing-partners.png" loading="lazy"
             class="object-cover w-full h-64 transition-transform duration-300 group-hover:scale-105">
         <div class="px-4 py-3">
-            <h1 class="text-2xl text-gray-300 ">Warehouse Management</h1>
+            <h1 class="text-2xl text-gray-300 ">Hospital Staffing Partners</h1>
+            <a href="https://www.hospitalstaffingpartners.com"
+                class="text-lg">https://www.hospitalstaffingpartners.com</a>
+        </div>
+    </div>
+    <div class="group bg-gray-900 rounded-lg overflow-hidden border border-gray-900 hover:border-blue-700">
+        <img src="v1/assets/projects/sport-clubs.png" loading="lazy"
+            class="object-cover w-full h-64 transition-transform duration-300 group-hover:scale-105">
+        <div class="px-4 py-3">
+            <h1 class="text-2xl text-gray-300 ">Sport Clubs</h1>
+            <a href="https://ayrunitedcompetitions.co.uk" class="text-lg">https://ayrunitedcompetitions.co.uk</a>
+            <a href="https://keltyheartscompetitions.co.uk" class="text-lg">https://keltyheartscompetitions.co.uk</a>
+            <a href="https://raithroverscompetitions.co.uk" class="text-lg">https://raithroverscompetitions.co.uk</a>
+            <a href="https://bluebrazilcompetitions.co.uk" class="text-lg">https://bluebrazilcompetitions.co.uk</a>
+            <a href="https://crossgatesprimrosecompetitions.co.uk"
+                class="text-lg">https://crossgatesprimrosecompetitions.co.uk</a>
+        </div>
+    </div>
+    <div class="group bg-gray-900 rounded-lg overflow-hidden border border-gray-900 hover:border-blue-700">
+        <img src="v1/assets/projects/capex-integrated-system.png" loading="lazy"
+            class="object-cover w-full h-64 transition-transform duration-300 group-hover:scale-105">
+        <div class="px-4 py-3">
+            <h1 class="text-2xl text-gray-300 ">CaPEx Integration System</h1>
             <a href="#" class="text-lg">Localhost Only</a>
         </div>
-    </div> -->
+    </div>
+    <div class="group bg-gray-900 rounded-lg overflow-hidden border border-gray-900 hover:border-blue-700">
+        <img src="v1/assets/projects/capex-fulfillment-system.png" loading="lazy"
+            class="object-cover w-full h-64 transition-transform duration-300 group-hover:scale-105">
+        <div class="px-4 py-3">
+            <h1 class="text-2xl text-gray-300 ">CaPEx Fulfillment System</h1>
+            <a href="#" class="text-lg">Localhost Only</a>
+        </div>
+    </div>
+    <div class="group bg-gray-900 rounded-lg overflow-hidden border border-gray-900 hover:border-blue-700">
+        <img src="v1/assets/projects/app-link-assistant.png" loading="lazy"
+            class="object-cover w-full h-64 transition-transform duration-300 group-hover:scale-105">
+        <div class="px-4 py-3">
+            <h1 class="text-2xl text-gray-300 ">App Link Assistant</h1>
+            <a href="#" class="text-lg">Localhost Only</a>
+        </div>
+    </div>
+    <div class="group bg-gray-900 rounded-lg overflow-hidden border border-gray-900 hover:border-blue-700">
+        <img src="v1/assets/projects/kahon.png" loading="lazy"
+            class="object-cover w-full h-64 transition-transform duration-300 group-hover:scale-105">
+        <div class="px-4 py-3">
+            <h1 class="text-2xl text-gray-300 ">Kahon</h1>
+            <a href="#" class="text-lg">Localhost Only</a>
+        </div>
+    </div>
+    <div class="group bg-gray-900 rounded-lg overflow-hidden border border-gray-900 hover:border-blue-700">
+        <img src="v1/assets/projects/hola-amigos.png" loading="lazy"
+            class="object-cover w-full h-64 transition-transform duration-300 group-hover:scale-105">
+        <div class="px-4 py-3">
+            <h1 class="text-2xl text-gray-300 ">Hola Amigos</h1>
+            <a href="#" class="text-lg">Localhost Only</a>
+        </div>
+    </div>
+    <div class="group bg-gray-900 rounded-lg overflow-hidden border border-gray-900 hover:border-blue-700">
+        <img src="v1/assets/projects/hopin.png" loading="lazy"
+            class="object-cover w-full h-64 transition-transform duration-300 group-hover:scale-105">
+        <div class="px-4 py-3">
+            <h1 class="text-2xl text-gray-300 ">Hopin</h1>
+            <a href="#" class="text-lg">Localhost Only</a>
+        </div>
+    </div>
+    <div class="group bg-gray-900 rounded-lg overflow-hidden border border-gray-900 hover:border-blue-700">
+        <img src="v1/assets/projects/vemobro-seller-portal.png" loading="lazy"
+            class="object-cover w-full h-64 transition-transform duration-300 group-hover:scale-105">
+        <div class="px-4 py-3">
+            <h1 class="text-2xl text-gray-300 ">Vemobro Seller Portal</h1>
+            <a href="#" class="text-lg">Localhost Only</a>
+        </div>
+    </div>
 </div>
